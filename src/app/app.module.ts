@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'; 
-import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatListModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatListModule, MatGridListModule, MatCardModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
@@ -25,6 +25,8 @@ import { MenuComponent } from './menu/menu.component';
     MatCheckboxModule,
     MatToolbarModule,
     MatListModule,
+    MatGridListModule,
+    MatCardModule,
     FlexLayoutModule
   ],
   providers: [],

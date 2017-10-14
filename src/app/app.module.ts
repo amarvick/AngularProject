@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'; 
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatToolbarModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
@@ -20,6 +20,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
     FlexLayoutModule
   ],
   providers: [],

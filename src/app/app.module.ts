@@ -20,6 +20,7 @@ import { ContactComponent } from './contact/contact.component';
 
 import { LeaderService } from './services/leader.service';
 import { DishService } from './services/dish.service';
+import { PromotionService } from './services/promotion.service'
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { DishService } from './services/dish.service';
     FlexLayoutModule,
     AppRoutingModule
   ],
-  providers: [ LeaderService, DishService ],
+  providers: [ LeaderService, DishService, PromotionService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -53,11 +53,31 @@
     </mat-card>
   </div>
 
+  <div fxFlex>
+    <div>
+      <h3>Corporate Leadership</h3>
+    </div>
+  </div>
 
   <div fxFlex>
-    <h2>Corporate Leadership</h2>
-    <mat-list *ngFor="let leader of leaders">
-      <mat-list-item>{{leader.name}}</mat-list-item>
-    </mat-list>
+    <div fxLayout="column" fxLayout.gt-sm="row">
+      <div fxFlex="100">
+        <mat-list>
+          <mat-list-item *ngFor="let leader of leaders">
+            <img mat-list-avatar src={{leader.image}} alt={{leader.name}}>
+            <h1 mat-line> {{leader.name}} </h1>
+            <p mat-line> {{leader.designation}} </p>
+            <p mat-line>
+              <span> {{leader.description}} </span>
+            </p>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
   </div>
+
+  <div [hidden]="leaders"> <!--Will activate when dishes are hidden. After they have loaded, this will go away-->
+    <mat-spinner></mat-spinner><h4>Loading ... Please Wait</h4>
+  </div>  
+
 </div>

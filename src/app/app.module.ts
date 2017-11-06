@@ -3,9 +3,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'; 
-import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatListModule, MatGridListModule, MatCardModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatListModule, MatGridListModule, MatCardModule, MatDialogModule, MatInputModule, MatSlideToggleModule, MatAutocompleteModule, MatProgressSpinnerModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import 'hammerjs';
 
@@ -20,7 +21,8 @@ import { ContactComponent } from './contact/contact.component';
 
 import { LeaderService } from './services/leader.service';
 import { DishService } from './services/dish.service';
-import { PromotionService } from './services/promotion.service'
+import { PromotionService } from './services/promotion.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { PromotionService } from './services/promotion.service'
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +48,24 @@ import { PromotionService } from './services/promotion.service'
     MatGridListModule,
     MatCardModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule,
+    MatInputModule,
+    MatSlideToggleModule,
+    MatAutocompleteModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule
   ],
-  providers: [ LeaderService, DishService, PromotionService ],
-  bootstrap: [ AppComponent ]
+  providers: [ 
+    LeaderService, 
+    DishService, 
+    PromotionService, 
+  ],
+  bootstrap: [ 
+    AppComponent 
+  ],
+  entryComponents: [ 
+    LoginComponent 
+  ]
 })
 export class AppModule { }

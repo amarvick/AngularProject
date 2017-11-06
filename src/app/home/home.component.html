@@ -44,4 +44,8 @@
     </mat-card-content>
   </mat-card>
 
+  <div [hidden]="dish" [hidden]="leader" [hidden]="promotion"> <!--Will activate when dishes are hidden. After they have loaded, this will go away-->
+    <mat-spinner></mat-spinner><h4>Loading ... Please Wait</h4>
+  </div>  
+
 </div>
